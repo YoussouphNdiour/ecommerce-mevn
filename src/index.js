@@ -96,7 +96,7 @@ app.delete('/api/users/:userId/cart/:productId', async (req, res) => {
   res.status(200).json(cartItems);
   client.close();
 });
-const public_path = path.join(__dirname, '../dist');
+const public_path = path.join(__dirname, '../build');
 app.use(express.static(public_path));
 app.get("*", (_, res) => {
   res.sendFile(path.join(public_path, 'index.html'));

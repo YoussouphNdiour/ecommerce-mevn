@@ -4,8 +4,10 @@
   "description": "mevn ecommerce",
   "main": "index.js",
   "scripts": {
-    "dev": " npx nodemon --exec npx babel-node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && npx nodemon --exec npx babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "serve": "node dist/index.js"
   },
   "author": "youssouph ndiour",
   "license": "ISC",
