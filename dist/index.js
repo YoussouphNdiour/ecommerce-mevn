@@ -288,6 +288,6 @@ app.use(_express["default"]["static"](public_path));
 app.get("*", function (_, res) {
   res.sendFile(_path["default"].join(public_path, 'index.html'));
 });
-app.listen(8000, function () {
+app.listen(process.env.PORT || 8000, function () {
   console.log('Server is listening on port 8000');
 });
