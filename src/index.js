@@ -101,6 +101,6 @@ app.use(express.static(public_path));
 app.get("*", (_, res) => {
   res.sendFile(path.join(public_path, 'index.html'));
 })
-app.listen(8000, () => {
+app.listen( process.env.PORT || 8000, () => {
     console.log('Server is listening on port 8000');
 });
